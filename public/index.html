@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Bean & Brew | Artisan Coffee</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a
+        href="#home"
+        class="logo"
+    >
+
+        <span class="logo-icon">☕</span>
+
+        <span>
+            BEAN <small>&</small> BREW
+        </span>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+        <a href="#home">Home</a>
+
+        <a href="#menu">Menu</a>
+
+        <a href="#story">Our Story</a>
+
+        <a href="#reviews">Reviews</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <button
+        class="cart-button"
+        onclick="openCart()"
+    >
+
+        <span>Cart</span>
+
+        <span
+            class="cart-count"
+            id="cartCount"
+        >
+            0
+        </span>
+
+    </button>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section
+    id="home"
+    class="hero"
+>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+
+            <span></span>
+
+            ARTISAN COFFEE & GOOD FOOD
+
+            <span></span>
+
+        </div>
+
+
+        <h1>
+
+            Coffee made for
+            <em>slow moments.</em>
+
+        </h1>
+
+
+        <p class="hero-text">
+
+            Carefully roasted beans, freshly baked treats,
+            and a warm space where every cup tells a story.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+            <a
+                href="#menu"
+                class="btn-primary"
+            >
+                Explore Menu
+                <span>→</span>
+            </a>
+
+
+            <a
+                href="#story"
+                class="btn-link"
+            >
+                Discover our story
+            </a>
+
+        </div>
+
+
+        <div class="hero-info">
+
+            <div>
+
+                <strong>4.9</strong>
+
+                <span>★★★★★</span>
+
+                <small>500+ happy guests</small>
+
+            </div>
+
+
+            <div class="vertical-line"></div>
+
+
+            <div>
+
+                <strong>100%</strong>
+
+                <small>Freshly roasted</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="hero-image-wrapper">
+
+            <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1100&q=90"
+                alt="Fresh coffee"
+            >
+
+        </div>
+
+
+        <div class="image-label">
+
+            <span>EST.</span>
+
+            <strong>2018</strong>
+
+            <small>PUNE</small>
+
+        </div>
+
+
+        <div class="coffee-badge">
+
+            <span class="badge-icon">☕</span>
+
+            <div>
+
+                <strong>Freshly brewed</strong>
+
+                <small>Every single cup</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FEATURE STRIP ================= -->
+
+<section class="feature-strip">
+
+    <div class="feature-item">
+
+        <div class="feature-icon">☕</div>
+
+        <div>
+
+            <strong>Specialty Coffee</strong>
+
+            <span>Premium single-origin beans</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature-item">
+
+        <div class="feature-icon">🥐</div>
+
+        <div>
+
+            <strong>Freshly Baked</strong>
+
+            <span>Made fresh every morning</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature-item">
+
+        <div class="feature-icon">🌿</div>
+
+        <div>
+
+            <strong>Cozy Atmosphere</strong>
+
+            <span>Your favorite place to unwind</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature-item">
+
+        <div class="feature-icon">♥</div>
+
+        <div>
+
+            <strong>Made With Love</strong>
+
+            <span>Because details matter</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= MENU ================= -->
+
+<section
+    id="menu"
+    class="menu-section"
+>
+
+    <div class="section-header">
+
+        <div>
+
+            <p class="eyebrow dark">
+
+                OUR MENU
+
+            </p>
+
+            <h2>
+
+                Crafted with
+                <em>care.</em>
+
+            </h2>
+
+        </div>
+
+
+        <p class="section-description">
+
+            From your morning espresso to an afternoon
+            sweet treat, find something worth slowing down for.
+
+        </p>
+
+    </div>
+
+
+    <div class="category-tabs">
+
+        <button
+            class="category active"
+            onclick="filterMenu('all', this)"
+        >
+            All
+        </button>
+
+        <button
+            class="category"
+            onclick="filterMenu('coffee', this)"
+        >
+            Coffee
+        </button>
+
+        <button
+            class="category"
+            onclick="filterMenu('bakery', this)"
+        >
+            Bakery
+        </button>
+
+        <button
+            class="category"
+            onclick="filterMenu('food', this)"
+        >
+            Breakfast
+        </button>
+
+        <button
+            class="category"
+            onclick="filterMenu('dessert', this)"
+        >
+            Desserts
+        </button>
+
+    </div>
+
+
+    <div
+        id="menuContainer"
+        class="menu-grid"
+    >
+
+    </div>
+
+
+    <div class="menu-footer">
+
+        <p>Can't decide?</p>
+
+        <a href="#contact">
+            Ask our barista →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= STORY ================= -->
+
+<section
+    id="story"
+    class="story-section"
+>
+
+    <div class="story-images">
+
+        <div class="story-main-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=85"
+                alt="Cafe interior"
+            >
+
+        </div>
+
+
+        <div class="story-small-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=85"
+                alt="Coffee shop"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="story-content">
+
+        <p class="eyebrow dark">
+
+            OUR STORY
+
+        </p>
+
+
+        <h2>
+
+            A little corner
+            <em>of comfort.</em>
+
+        </h2>
+
+
+        <p>
+
+            Bean & Brew began with a simple dream —
+            to create a space where exceptional coffee
+            meets genuine connection.
+
+        </p>
+
+
+        <p>
+
+            We work closely with passionate farmers,
+            carefully roast our beans, and make every
+            cup with intention. Whether you're catching
+            up with a friend or enjoying a quiet morning,
+            there's always a seat waiting for you.
+
+        </p>
+
+
+        <div class="story-signature">
+
+            <span>Made with love,</span>
+
+            <strong>Bean & Brew</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats-section">
+
+    <div class="stat">
+
+        <strong>7+</strong>
+
+        <span>Years brewing</span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>15k+</strong>
+
+        <span>Cups served</span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>12</strong>
+
+        <span>Local suppliers</span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>4.9</strong>
+
+        <span>Average rating</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section
+    id="reviews"
+    class="reviews-section"
+>
+
+    <div class="section-header centered">
+
+        <p class="eyebrow dark">
+
+            FROM OUR GUESTS
+
+        </p>
+
+        <h2>
+
+            Words worth
+            <em>sharing.</em>
+
+        </h2>
+
+    </div>
+
+
+    <div class="reviews-grid">
+
+        <article class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+
+                "The best cappuccino I've had in Pune.
+                The atmosphere is beautiful and the
+                staff genuinely care about the experience."
+
+            </p>
+
+            <div class="reviewer">
+
+                <div class="avatar">A</div>
+
+                <div>
+
+                    <strong>Arjun Mehta</strong>
+
+                    <span>Regular guest</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="review featured-review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+
+                "Perfect place for a slow Sunday morning.
+                Amazing coffee, incredible cheesecake,
+                and such a peaceful vibe."
+
+            </p>
+
+            <div class="reviewer">
+
+                <div class="avatar">S</div>
+
+                <div>
+
+                    <strong>Sneha Patil</strong>
+
+                    <span>Coffee lover</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+
+                "I've been coming here for years.
+                Their beans are exceptional and the
+                avocado toast is a must try."
+
+            </p>
+
+            <div class="reviewer">
+
+                <div class="avatar">R</div>
+
+                <div>
+
+                    <strong>Rahul Joshi</strong>
+
+                    <span>Regular guest</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+    <div>
+
+        <p class="eyebrow">
+
+            YOUR TABLE IS WAITING
+
+        </p>
+
+        <h2>
+
+            Come for the coffee.
+            <em>Stay for the feeling.</em>
+
+        </h2>
+
+        <p>
+
+            Drop by for a cup, stay for the conversation.
+
+        </p>
+
+    </div>
+
+
+    <a
+        href="#contact"
+        class="btn-light"
+    >
+        Find Us →
+    </a>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section
+    id="contact"
+    class="contact-section"
+>
+
+    <div class="contact-info">
+
+        <p class="eyebrow dark">
+
+            COME SAY HELLO
+
+        </p>
+
+        <h2>
+
+            Find your way
+            <em>to us.</em>
+
+        </h2>
+
+
+        <div class="contact-details">
+
+            <div>
+
+                <span>📍</span>
+
+                <div>
+
+                    <strong>Visit us</strong>
+
+                    <p>
+                        123 Coffee Street,
+                        Koregaon Park, Pune
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <span>🕐</span>
+
+                <div>
+
+                    <strong>Opening hours</strong>
+
+                    <p>
+                        Mon – Fri: 8:00 AM – 10:00 PM<br>
+                        Sat – Sun: 9:00 AM – 11:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <span>✉</span>
+
+                <div>
+
+                    <strong>Get in touch</strong>
+
+                    <p>
+                        hello@beanandbrew.com<br>
+                        +91 98765 43210
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="map-card">
+
+        <div class="map-pattern">
+
+            <div class="map-pin">
+
+                <span>☕</span>
+
+            </div>
+
+        </div>
+
+        <div class="map-bottom">
+
+            <strong>Bean & Brew</strong>
+
+            <span>Koregaon Park, Pune</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+
+                ☕ BEAN <small>&</small> BREW
+
+            </div>
+
+            <p>
+
+                Coffee. Community. Good moments.
+
+            </p>
+
+        </div>
+
+
+        <div class="social-links">
+
+            <a href="#">Instagram</a>
+
+            <a href="#">Facebook</a>
+
+            <a href="#">Google</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Bean & Brew Coffee Co.
+        </span>
+
+        <span>
+            Made with ☕ in Pune
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= CART ================= -->
+
+<div
+    id="cartOverlay"
+    class="cart-overlay"
+    onclick="closeCart()"
+></div>
+
+
+<aside
+    id="cartSidebar"
+    class="cart-sidebar"
+>
+
+    <div class="cart-header">
+
+        <div>
+
+            <p class="eyebrow dark">
+                YOUR ORDER
+            </p>
+
+            <h2>Your Cart</h2>
+
+        </div>
+
+
+        <button
+            class="close-cart"
+            onclick="closeCart()"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        id="cartItems"
+        class="cart-items"
+    >
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>Total</span>
+
+            <strong id="cartTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            onclick="checkout()"
+        >
+            Continue to Checkout
+            <span>→</span>
+        </button>
+
+        <small>
+            Demo checkout — no payment will be processed.
+        </small>
+
+    </div>
+
+</aside>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
